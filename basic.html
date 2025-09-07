@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Basic Quiz - WebQuizzer</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    h2 { color: #4CAF50; }
+    .question { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    button { margin-top: 10px; padding: 8px 15px; border: none; background: #4CAF50; color: white; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <h2>📘 Basic HTML & CSS Quiz</h2>
+
+  <div class="question">
+    <p>1.What does &lt;!DOCTYPE html&gt; mean? </p>
+    <button onclick="checkAnswer(this, true)"> Defines HTML5 document</button>
+    <button onclick="checkAnswer(this, false)">Adds a header</button>
+    <button onclick="checkAnswer(this, false)">Declares CSS</button>
+    <button onclick="checkAnswer(this, false)">Starts JavaScript</button>
+  </div>
+    <div class="question"><p><b>Q2:</b> Which tag inserts an image?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;img&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;image&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;src&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;pic&gt;</button>
+      </div>
+    </div>
+    <div class="question"><p><b>Q3:</b> Which tag creates a hyperlink?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,false)">&lt;link&gt;</button>
+        <button onclick="checkAnswer(this,true)">&lt;a&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;href&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;url&gt;</button>
+      </div>
+    </div>
+    <div class="question"><p><b>Q4:</b> Which tag is used for the largest heading?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;h1&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;h6&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;heading&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;title&gt;</button>
+      </div>
+    </div>
+  <div class="question">
+    <p><b>Q5:</b> Which attribute is used for image alternative text?</p>
+    <button onclick="checkAnswer(this,true)">alt</button>
+    <button onclick="checkAnswer(this,false)">title</button>
+    <button onclick="checkAnswer(this,false)">src</button>
+    <button onclick="checkAnswer(this,false)">href</button>
+  </div>
+  <div class="question">
+    <p><b>Q6:</b> Which tag is used for a line break?</p>
+    <button onclick="checkAnswer(this,true)">&lt;br&gt;</button>
+    <button onclick="checkAnswer(this,false)">&lt;lb&gt;</button>
+    <button onclick="checkAnswer(this,false)">&lt;break&gt;</button>
+    <button onclick="checkAnswer(this,false)">&lt;nl&gt;</button>
+  </div>
+
+    <div class="question"><p><b>Q7:</b> Which element is used for tables?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,false)">&lt;tr&gt;</button>
+        <button onclick="checkAnswer(this,true)">&lt;table&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;grid&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;tab&gt;</button>
+      </div>
+    </div>
+    <div class="question"><p><b>Q8:</b> What is the correct HTML for a checkbox?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;input type="checkbox"&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;check&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;input checkbox&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;box&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q9:</b> Which HTML element is used for ordered lists?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;ol&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;ul&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;list&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;order&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q10:</b> Which element is used to define metadata?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;meta&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;head&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;info&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;data&gt;</button>
+      </div>
+    </div>
+        <div class="question"><p><b>Q11:</b> Which HTML tag is used for inserting a video?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;video&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;media&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;movie&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;vid&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q12:</b> Which element is used for inserting audio?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;audio&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;sound&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;music&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;play&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q13:</b> Which HTML element is used to display a scalar measurement?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;meter&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;progress&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;scale&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;measure&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q14:</b> Which tag is used to create a dropdown list?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;select&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;list&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;dropdown&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;option&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q15:</b> Which tag is used to create an option inside a dropdown?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;option&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;choice&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;item&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;value&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q16:</b> Which input type creates a password field?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;input type="password"&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;input type="text"&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;input type="secure"&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;password&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q17:</b> Which tag is used to create a numbered list?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;ol&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;ul&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;list&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;num&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q18:</b> Which HTML element is used for emphasized text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;em&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;i&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;strong&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;italic&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q19:</b> Which tag creates a definition list?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;dl&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;list&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;def&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;desc&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q20:</b> Which tag is used for inline frames?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;iframe&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;frame&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;inline&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;window&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q21:</b> Which tag is used to show progress of a task?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;progress&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;meter&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;bar&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;task&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q22:</b> Which HTML element is used for navigation links?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;nav&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;navigation&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;links&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;menu&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q23:</b> Which element defines important text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;strong&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;b&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;mark&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;em&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q24:</b> Which tag is used for marking highlighted text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;mark&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;highlight&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;yellow&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;hl&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q25:</b> Which tag is used for footer information?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;footer&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;bottom&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;end&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;section&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q26:</b> Which property changes text color?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">color</button>
+        <button onclick="checkAnswer(this,false)">font-style</button>
+        <button onclick="checkAnswer(this,false)">background</button>
+        <button onclick="checkAnswer(this,false)">text-align</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q27:</b> Which property changes background color?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,false)">color</button>
+        <button onclick="checkAnswer(this,true)">background-color</button>
+        <button onclick="checkAnswer(this,false)">font-color</button>
+        <button onclick="checkAnswer(this,false)">text-style</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q28:</b> Which CSS unit is relative to root font size?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,false)">px</button>
+        <button onclick="checkAnswer(this,false)">em</button>
+        <button onclick="checkAnswer(this,true)">rem</button>
+        <button onclick="checkAnswer(this,false)">%</button>
+      </div>
+    </div>
+    <div class="question"><p><b>Q29:</b> Which property makes text bold?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">font-weight</button>
+        <button onclick="checkAnswer(this,false)">text-style</button>
+        <button onclick="checkAnswer(this,false)">bold</button>
+        <button onclick="checkAnswer(this,false)">font-type</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q30:</b> Which property is used for grid layout?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">display: grid</button>
+        <button onclick="checkAnswer(this,false)">display: block</button>
+        <button onclick="checkAnswer(this,false)">position: grid</button>
+        <button onclick="checkAnswer(this,false)">grid-mode</button>
+      </div>
+    </div>
+        <div class="question"><p><b>Q31:</b> Which property is used to change text color in CSS?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">color</button>
+        <button onclick="checkAnswer(this,false)">text-color</button>
+        <button onclick="checkAnswer(this,false)">font-color</button>
+        <button onclick="checkAnswer(this,false)">foreground</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q32:</b> Which CSS property changes the background color?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">background-color</button>
+        <button onclick="checkAnswer(this,false)">bgcolor</button>
+        <button onclick="checkAnswer(this,false)">color-bg</button>
+        <button onclick="checkAnswer(this,false)">background</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q33:</b> Which property controls the size of text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">font-size</button>
+        <button onclick="checkAnswer(this,false)">text-size</button>
+        <button onclick="checkAnswer(this,false)">size</button>
+        <button onclick="checkAnswer(this,false)">font-height</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q34:</b> Which CSS property makes text bold?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">font-weight</button>
+        <button onclick="checkAnswer(this,false)">text-bold</button>
+        <button onclick="checkAnswer(this,false)">font-bold</button>
+        <button onclick="checkAnswer(this,false)">weight</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q35:</b> Which property is used to underline text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">text-decoration</button>
+        <button onclick="checkAnswer(this,false)">font-style</button>
+        <button onclick="checkAnswer(this,false)">underline</button>
+        <button onclick="checkAnswer(this,false)">decoration</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q36:</b> Which property is used for spacing between letters?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">letter-spacing</button>
+        <button onclick="checkAnswer(this,false)">word-spacing</button>
+        <button onclick="checkAnswer(this,false)">spacing</button>
+        <button onclick="checkAnswer(this,false)">line-gap</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q37:</b> Which property changes the font type?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">font-family</button>
+        <button onclick="checkAnswer(this,false)">font-style</button>
+        <button onclick="checkAnswer(this,false)">font-type</button>
+        <button onclick="checkAnswer(this,false)">text-font</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q38:</b> Which CSS property is used to align text horizontally?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">text-align</button>
+        <button onclick="checkAnswer(this,false)">align</button>
+        <button onclick="checkAnswer(this,false)">horizontal-align</button>
+        <button onclick="checkAnswer(this,false)">font-align</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q39:</b> Which property controls line spacing?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">line-height</button>
+        <button onclick="checkAnswer(this,false)">line-spacing</button>
+        <button onclick="checkAnswer(this,false)">text-height</button>
+        <button onclick="checkAnswer(this,false)">height-line</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q40:</b> Which CSS property sets the space outside elements?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">margin</button>
+        <button onclick="checkAnswer(this,false)">padding</button>
+        <button onclick="checkAnswer(this,false)">border</button>
+        <button onclick="checkAnswer(this,false)">spacing</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q41:</b> Which property sets the space inside an element?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">padding</button>
+        <button onclick="checkAnswer(this,false)">margin</button>
+        <button onclick="checkAnswer(this,false)">spacing</button>
+        <button onclick="checkAnswer(this,false)">gap</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q42:</b> Which property controls border thickness?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">border-width</button>
+        <button onclick="checkAnswer(this,false)">border-thickness</button>
+        <button onclick="checkAnswer(this,false)">border-size</button>
+        <button onclick="checkAnswer(this,false)">border-style</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q43:</b> Which property controls border style?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">border-style</button>
+        <button onclick="checkAnswer(this,false)">border-type</button>
+        <button onclick="checkAnswer(this,false)">border-shape</button>
+        <button onclick="checkAnswer(this,false)">border-format</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q44:</b> Which property controls border color?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">border-color</button>
+        <button onclick="checkAnswer(this,false)">border-shade</button>
+        <button onclick="checkAnswer(this,false)">color-border</button>
+        <button onclick="checkAnswer(this,false)">border-bg</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q45:</b> Which property rounds the corners of elements?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">border-radius</button>
+        <button onclick="checkAnswer(this,false)">corner</button>
+        <button onclick="checkAnswer(this,false)">round-corner</button>
+        <button onclick="checkAnswer(this,false)">radius</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q46:</b> Which property controls shadow of a box?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">box-shadow</button>
+        <button onclick="checkAnswer(this,false)">shadow</button>
+        <button onclick="checkAnswer(this,false)">element-shadow</button>
+        <button onclick="checkAnswer(this,false)">border-shadow</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q47:</b> Which property controls shadow of text?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">text-shadow</button>
+        <button onclick="checkAnswer(this,false)">shadow</button>
+        <button onclick="checkAnswer(this,false)">font-shadow</button>
+        <button onclick="checkAnswer(this,false)">color-shadow</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q48:</b> Which property makes an element hidden?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">display: none</button>
+        <button onclick="checkAnswer(this,false)">hidden: true</button>
+        <button onclick="checkAnswer(this,false)">visibility: false</button>
+        <button onclick="checkAnswer(this,false)">hide</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q49:</b> Which property makes an element transparent?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">opacity</button>
+        <button onclick="checkAnswer(this,false)">visibility</button>
+        <button onclick="checkAnswer(this,false)">alpha</button>
+        <button onclick="checkAnswer(this,false)">transparent</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q50:</b> Which CSS property is used to change the cursor on hover?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">cursor</button>
+        <button onclick="checkAnswer(this,false)">pointer</button>
+        <button onclick="checkAnswer(this,false)">hover</button>
+        <button onclick="checkAnswer(this,false)">mouse</button>
+      </div>
+    </div>
+
+    <a href="index.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+  </div>
+
+
+  <script>
+    function checkAnswer(button, correct) {
+      if (correct) {
+        button.style.background = "green";
+        button.innerText += " ✅ Correct!";
+      } else {
+        button.style.background = "red";
+        button.innerText += " ❌ Wrong!";
+      }
+      // disable all buttons in the same question
+      let parent = button.parentElement;
+      let buttons = parent.querySelectorAll("button");
+      buttons.forEach(b => b.disabled = true);
+    }
+  </script>
+</body>
+</html>
+

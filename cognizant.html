@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cognizant — History & Interview Questions</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+      background: #f9fafc;
+      color: #333;
+    }
+    h1 { color: #0b4da1; }
+    h2 { color: #12385f; margin-top: 20px; }
+    .card {
+      background: #fff;
+      padding: 14px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      margin-bottom: 12px;
+    }
+    .qa {
+      background: #fff;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #dce7ff;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+    .qa .answer { display: none; margin-top: 8px; color: #222; }
+    .qa.open .answer { display: block; }
+  </style>
+</head>
+<body>
+  <h1>Cognizant — Company Info & Interview Prep</h1>
+
+  <!-- History -->
+  <div class="card">
+    <h2>Company History</h2>
+    <p><strong>Cognizant Technology Solutions (CTS)</strong> was founded in 1994 as a technology unit of Dun & Bradstreet and became independent later. Headquartered in Teaneck, New Jersey, USA, Cognizant is now a Fortune 500 company that provides IT consulting, digital, and business process services worldwide.</p>
+  </div>
+
+  <div class="card">
+    <h2>What Cognizant Looks For</h2>
+    <ul>
+      <li>Good programming and problem-solving skills.</li>
+      <li>Knowledge of web technologies (HTML, CSS, JavaScript).</li>
+      <li>Database, OS, and cloud fundamentals.</li>
+      <li>Excellent communication and teamwork skills.</li>
+    </ul>
+  </div>
+
+  <!-- Interview Questions -->
+  <div class="card">
+    <h2>Interview Questions</h2>
+
+    <h3>HTML</h3>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">1. Difference between inline and block elements?</div>
+      <div class="answer">Inline elements do not start on a new line (e.g., &lt;span&gt;), while block elements occupy the full width and start on a new line (e.g., &lt;div&gt;).</div>
+    </div>
+
+    <h3>CSS</h3>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">2. Difference between relative and absolute positioning?</div>
+      <div class="answer">Relative is positioned relative to itself, while absolute is positioned relative to the nearest positioned ancestor.</div>
+    </div>
+
+    <h3>JavaScript</h3>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">3. Difference between var, let, and const?</div>
+      <div class="answer">Var is function-scoped, let and const are block-scoped. Const cannot be reassigned.</div>
+    </div>
+  </div>
+
+  <!-- HR Round -->
+  <div class="card">
+    <h2>HR Round Questions</h2>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">1. Tell me about yourself.</div>
+      <div class="answer">Introduce your education, technical skills, and strengths in 60–90 seconds.</div>
+    </div>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">2. Why do you want to join Cognizant?</div>
+      <div class="answer">Show interest in digital transformation, innovation, and global career opportunities at Cognizant.</div>
+    </div>
+  </div>
+
+  <!-- Verbal Communication -->
+  <div class="card">
+    <h2>Verbal Communication Round</h2>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">1. How would you explain your project to a non-technical person?</div>
+      <div class="answer">Avoid jargon, use simple words and analogies, focus on benefits instead of technical complexity.</div>
+    </div>
+    <div class="qa" onclick="this.classList.toggle('open')">
+      <div class="question">2. Can you describe a situation where communication solved a conflict?</div>
+      <div class="answer">Talk about listening actively, clarifying doubts, and reaching a mutual solution professionally.</div>
+    </div>
+  </div>
+  <a href="interview.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+
+
+  <script>
+    // Toggle Q&A
+    document.querySelectorAll(".qa").forEach(item => {
+      item.addEventListener("click", () => item.classList.toggle("open"));
+    });
+  </script>
+</body>
+</html>

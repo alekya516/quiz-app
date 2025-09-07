@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Test 2</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .hidden { display: none; }
+    #timer { font-weight: bold; color: red; }
+    .question { margin-bottom: 15px; }
+    button { margin-top: 10px; padding: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>📑 Mock Test 2</h1>
+  <p>Duration: <span id="timer">15:00</span></p>
+
+  <button id="startBtn">Start Test</button>
+
+  <form id="quizForm" class="hidden">
+    <div class="question">
+      <p>1. A train travels 120 km in 2 hours. What is its average speed?</p>
+      <label><input type="radio" name="q1" value="a"> 50 km/h</label><br>
+      <label><input type="radio" name="q1" value="b"> 60 km/h</label><br>
+      <label><input type="radio" name="q1" value="c"> 70 km/h</label>
+    </div>
+    <div class="question">
+      <p>2. A man can do a piece of work in 10 days. His friend can do it in 15 days. How long will they take together?</p>
+      <label><input type="radio" name="q2" value="a"> 6 days</label><br>
+      <label><input type="radio" name="q2" value="b"> 7 days</label><br>
+      <label><input type="radio" name="q2" value="c"> 8 days</label>
+    </div>
+    <div class="question">
+      <p>3. A box contains 5 red, 3 blue, and 2 green balls. Probability of picking a red ball?</p>
+      <label><input type="radio" name="q3" value="a"> 1/2</label><br>
+      <label><input type="radio" name="q3" value="b"> 1/3</label><br>
+      <label><input type="radio" name="q3" value="c"> 1/5</label>
+    </div>
+    <div class="question">
+      <p>4. A shopkeeper sells an article for ₹450 at a profit of 20%. What is the cost price?</p>
+      <label><input type="radio" name="q4" value="a"> ₹350</label><br>
+      <label><input type="radio" name="q4" value="b"> ₹375</label><br>
+      <label><input type="radio" name="q4" value="c"> ₹400</label>
+    </div>
+    <div class="question">
+      <p>5. If the marked price of an item is ₹500 and discount is 10%, what is the selling price?</p>
+      <label><input type="radio" name="q5" value="a"> ₹450</label><br>
+      <label><input type="radio" name="q5" value="b"> ₹475</label><br>
+      <label><input type="radio" name="q5" value="c"> ₹480</label>
+    </div>
+    <div class="question">
+      <p>6. A person invests ₹10,000 at 5% simple interest per annum. Interest after 3 years?</p>
+      <label><input type="radio" name="q6" value="a"> ₹1,500</label><br>
+      <label><input type="radio" name="q6" value="b"> ₹1,250</label><br>
+      <label><input type="radio" name="q6" value="c"> ₹1,000</label>
+    </div>
+    <div class="question">
+      <p>7. Antonym of "Difficult"?</p>
+      <label><input type="radio" name="q7" value="a"> Easy</label><br>
+      <label><input type="radio" name="q7" value="b"> Hard</label><br>
+      <label><input type="radio" name="q7" value="c"> Complex</label>
+    </div>
+    <div class="question">
+      <p>8. Antonym of "Ancient"?</p>
+      <label><input type="radio" name="q8" value="a"> Modern</label><br>
+      <label><input type="radio" name="q8" value="b"> Old</label><br>
+      <label><input type="radio" name="q8" value="c"> Historic</label>
+    </div>
+    <div class="question">
+      <p>9. Synonym of "Brave"?</p>
+      <label><input type="radio" name="q9" value="a"> Courageous</label><br>
+      <label><input type="radio" name="q9" value="b"> Fearful</label><br>
+      <label><input type="radio" name="q9" value="c"> Timid</label>
+    </div>
+    <div class="question">
+      <p>10. Fill in the blank: He is interested ___ painting.</p>
+      <label><input type="radio" name="q10" value="a"> at</label><br>
+      <label><input type="radio" name="q10" value="b"> in</label><br>
+      <label><input type="radio" name="q10" value="c"> on</label>
+    </div>
+    <div class="question">
+      <p>11. Choose the correct tense: They ___ to the park every Sunday.</p>
+      <label><input type="radio" name="q11" value="a"> go</label><br>
+      <label><input type="radio" name="q11" value="b"> went</label><br>
+      <label><input type="radio" name="q11" value="c"> will go</label>
+    </div>
+    <div class="question">
+      <p>12. Which tag is used to insert an image in HTML?</p>
+      <label><input type="radio" name="q12" value="a"> &lt;img&gt;</label><br>
+      <label><input type="radio" name="q12" value="b"> &lt;image&gt;</label><br>
+      <label><input type="radio" name="q12" value="c"> &lt;picture&gt;</label>
+    </div>
+    <div class="question">
+      <p>13. Which tag is used to define a table row?</p>
+      <label><input type="radio" name="q13" value="a"> &lt;td&gt;</label><br>
+      <label><input type="radio" name="q13" value="b"> &lt;tr&gt;</label><br>
+      <label><input type="radio" name="q13" value="c"> &lt;table&gt;</label>
+    </div>
+    <div class="question">
+      <p>14. Which tag is used to create a dropdown list?</p>
+      <label><input type="radio" name="q14" value="a"> &lt;select&gt;</label><br>
+      <label><input type="radio" name="q14" value="b"> &lt;option&gt;</label><br>
+      <label><input type="radio" name="q14" value="c"> &lt;input&gt;</label>
+    </div>
+    <div class="question">
+      <p>15. Which CSS property is used to change font size?</p>
+      <label><input type="radio" name="q15" value="a"> font-style</label><br>
+      <label><input type="radio" name="q15" value="b"> font-size</label><br>
+      <label><input type="radio" name="q15" value="c"> text-size</label>
+    </div>
+    <div class="question">
+      <p>16. Which CSS property is used to align text to the center?</p>
+      <label><input type="radio" name="q16" value="a"> text-align</label><br>
+      <label><input type="radio" name="q16" value="b"> align-text</label><br>
+      <label><input type="radio" name="q16" value="c"> center-align</label>
+    </div>
+    <div class="question">
+      <p>17. Which property is used to change the border color in CSS?</p>
+      <label><input type="radio" name="q17" value="a"> border-color</label><br>
+      <label><input type="radio" name="q17" value="b"> color</label><br>
+      <label><input type="radio" name="q17" value="c"> border-style</label>
+    </div>
+    <div class="question">
+      <p>18. Which keyword declares a constant in JavaScript?</p>
+      <label><input type="radio" name="q18" value="a"> var</label><br>
+      <label><input type="radio" name="q18" value="b"> const</label><br>
+      <label><input type="radio" name="q18" value="c"> let</label>
+    </div>
+    <div class="question">
+      <p>19. How do you write a multi-line comment in JavaScript?</p>
+      <label><input type="radio" name="q19" value="a"> /* Comment */</label><br>
+      <label><input type="radio" name="q19" value="b"> // Comment</label><br>
+      <label><input type="radio" name="q19" value="c"> # Comment</label>
+    </div>
+    <div class="question">
+      <p>20. Which method is used to remove the last element from an array in JavaScript?</p>
+      <label><input type="radio" name="q20" value="a"> pop()</label><br>
+      <label><input type="radio" name="q20" value="b"> push()</label><br>
+      <label><input type="radio" name="q20" value="c"> shift()</label>
+    </div>
+    <button type="submit">Submit Test</button>
+  </form>
+
+  <!--<div id="result" class="hidden"></div>-->
+
+  <script>
+    let timer;
+    let timeLeft = 900; // 15 minutes
+
+    const startBtn = document.getElementById("startBtn");
+    const quizForm = document.getElementById("quizForm");
+    const resultDiv = document.getElementById("result");
+    const timerDisplay = document.getElementById("timer");
+
+    const answers = {
+      q1: "b", // 60 km/h
+      q2: "b", // 7 days
+      q3: "a", // 1/2
+      q4: "b", // ₹375
+      q5: "a", // ₹450
+      q6: "b", // ₹1,250
+      q7: "a", // Easy
+      q8: "a", // Modern
+      q9: "a", // Courageous
+      q10: "b", // in
+      q11: "a", // go
+      q12: "a", // <img>
+      q13: "b", // <tr>
+      q14: "a", // <select>
+      q15: "b", // fornt-size
+      q16: "a", // text-align
+      q17: "a", // border-color
+      q18: "a", // let 
+      q19: "a", // /*Comment*/
+      q20: "a", //  pop()
+    };
+
+    startBtn.addEventListener("click", () => {
+      startBtn.classList.add("hidden");
+      quizForm.classList.remove("hidden");
+      startTimer();
+    });
+
+    function startTimer() {
+      timer = setInterval(() => {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          submitTest();
+        }
+        timeLeft--;
+      }, 1000);
+    }
+
+    quizForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      submitTest();
+    });
+
+    function submitTest() {
+      clearInterval(timer);
+      quizForm.classList.add("hidden");
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let key in answers) {
+        let selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) score++;
+      }
+
+      let percentage = ((score / total) * 100).toFixed(2);
+      localStorage.setItem("score", score);
+      localStorage.setItem("total", total);
+      localStorage.setItem("percentage",percentage);
+      window.location.href ="congrats.html";
+    }
+  </script>
+
+  <a href="mock test.html">
+    <div class="card">⬅ Back to Home</div>
+  </a>
+
+</body>
+</html>

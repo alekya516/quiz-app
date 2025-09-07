@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mock Test 1</title>
+<style>
+  body { font-family: Arial, sans-serif; padding: 20px; }
+  .hidden { display: none; }
+  #timer { font-weight: bold; color: red; }
+  .question { margin-bottom: 15px; }
+  button { margin-top: 10px; padding: 10px; cursor: pointer; }
+</style>
+</head>
+<body>
+<h1>📑 Mock Test 1</h1>
+<p>Duration: <span id="timer">20:00</span></p>
+<button id="startBtn">Start Test</button>
+
+<form id="quizForm" class="hidden">
+  <div class="question">
+    <p>1. What is 20% of 150?</p>
+    <label><input type="radio" name="q1" value="a"> 20</label><br>
+    <label><input type="radio" name="q1" value="b"> 30</label><br>
+    <label><input type="radio" name="q1" value="c"> 40</label>
+  </div>
+  <div class="question">
+    <p>2. A student scored 180 marks out of 300. Percentage?</p>
+    <label><input type="radio" name="q2" value="a"> 50%</label><br>
+    <label><input type="radio" name="q2" value="b"> 55%</label><br>
+    <label><input type="radio" name="q2" value="c"> 60%</label><br>
+    <label><input type="radio" name="q2" value="d"> 65%</label>
+  </div>
+  <div class="question">
+    <p>3. Price increase from ₹800 → ₹1000. % increase?</p>
+    <label><input type="radio" name="q3" value="a"> 20%</label><br>
+    <label><input type="radio" name="q3" value="b"> 22.5%</label><br>
+    <label><input type="radio" name="q3" value="c"> 25%</label><br>
+    <label><input type="radio" name="q3" value="d"> 30%</label>
+  </div>
+  <div class="question">
+        <p>5. If a shopkeeper sells a pen for ₹90 at a loss of 10%, what was the cost price of the pen?</p>
+        <label><input type="radio" name="q5" value="a"> ₹95</label><br>
+        <label><input type="radio" name="q5" value="b"> ₹100</label><br>
+        <label><input type="radio" name="q5" value="c"> ₹105</label><br>
+        <label><input type="radio" name="q5" value="d"> ₹110</label>
+    </div>
+    <div class="question">
+        <p>6. A man spends 40% of his income on rent, 25% on food, and saves the rest. If his income is ₹20,000, how much does he save?</p>
+        <label><input type="radio" name="q6" value="a"> ₹7,000</label><br>
+        <label><input type="radio" name="q6" value="b"> ₹6,000</label><br>
+        <label><input type="radio" name="q6" value="c"> ₹8,000</label><br>
+        <label><input type="radio" name="q6" value="d"> ₹9,000</label>
+    </div>
+    <div class="question">
+      <p>7. Antonym of "Happy"?</p>
+      <label><input type="radio" name="q7" value="a"> Sad</label><br>
+      <label><input type="radio" name="q7" value="b"> Joyful</label><br>
+      <label><input type="radio" name="q7" value="c"> Excited</label>
+    </div>
+    <div class="question">
+        <p>8. Antonym of "Generous"?</p>
+        <label><input type="radio" name="q8" value="a"> Stingy</label><br>
+        <label><input type="radio" name="q8" value="b"> Kind</label><br>
+        <label><input type="radio" name="q8" value="c"> Honest</label>
+    </div>
+    <div class="question">
+        <p>9. Synonym of "Nostalgic"?</p>
+        <label><input type="radio" name="q9" value="a"> Indolent</label><br>
+        <label><input type="radio" name="q9" value="b"> Diseased</label><br>
+        <label><input type="radio" name="q9" value="c"> Homesick</label>
+    </div>
+    <div class="question">
+        <p>10. Fill in the blank: She is good ___ mathematics.</p>
+        <label><input type="radio" name="q10" value="a"> at</label><br>
+        <label><input type="radio" name="q10" value="b"> in</label><br>
+        <label><input type="radio" name="q10" value="c"> on</label>
+    </div>
+    <div class="question">
+        <p>11. Choose the correct tense: I ___ to the market yesterday.</p>
+        <label><input type="radio" name="q11" value="a"> go</label><br>
+        <label><input type="radio" name="q11" value="b"> went</label><br>
+        <label><input type="radio" name="q11" value="c"> will go</label>
+    </div>
+    <div class="question">
+        <p>12. Which tag is used for the largest heading?</p>
+        <label><input type="radio" name="q12" value="a"> h1</label><br>
+        <label><input type="radio" name="q12" value="b"> h6</label><br>
+        <label><input type="radio" name="q12" value="c"> title</label>
+    </div>
+    <div class="question">
+        <p>13. Which tag is used to create a hyperlink in HTML?</p>
+        <label><input type="radio" name="q13" value="a"> &lt;link&gt;</label><br>
+        <label><input type="radio" name="q13" value="b"> &lt;a&gt;</label><br>
+        <label><input type="radio" name="q13" value="c"> &lt;p&gt;</label>
+    </div>
+    <div class="question">
+        <p>14. Which HTML tag is used to display a numbered list?</p>
+        <label><input type="radio" name="q14" value="a"> &lt;ol&gt;</label><br>
+        <label><input type="radio" name="q14" value="b"> &lt;ul&gt;</label><br>
+        <label><input type="radio" name="q14" value="c"> &lt;li&gt;</label>
+    </div>
+    <div class="question">
+        <p>15. Which property is used to change the background color in CSS?</p>
+        <label><input type="radio" name="q15" value="a"> color</label><br>
+        <label><input type="radio" name="q15" value="b"> background-color</label><br>
+        <label><input type="radio" name="q15" value="c"> bgcolor</label>
+    </div>
+    <div class="question">
+        <p>16. Which CSS property is used to make text bold?</p>
+        <label><input type="radio" name="q16" value="a"> font-style</label><br>
+        <label><input type="radio" name="q16" value="b"> font-weight</label><br>
+        <label><input type="radio" name="q16" value="c"> text-decoration</label>
+    </div>
+    <div class="question">
+        <p>17. Which property is used to change the text color?</p>
+        <label><input type="radio" name="q17" value="a"> text-color</label><br>
+        <label><input type="radio" name="q17" value="b"> color</label><br>
+        <label><input type="radio" name="q17" value="c"> font-color</label>
+    </div>
+    <div class="question">
+        <p>18. Which keyword is used to declare a variable in JavaScript?</p>
+        <label><input type="radio" name="q18" value="a"> var</label><br>
+        <label><input type="radio" name="q18" value="b"> variable</label><br>
+        <label><input type="radio" name="q18" value="c"> let</label>
+    </div>
+    <div class="question">
+        <p>19. How do you write a comment in JavaScript?</p>
+        <label><input type="radio" name="q19" value="a"> &lt;!-- Comment --&gt;</label><br>
+        <label><input type="radio" name="q19" value="b"> // Comment</label><br>
+        <label><input type="radio" name="q19" value="c"> # Comment</label>
+    </div>
+    <div class="question">
+        <p>20. Which method is used to print output in JavaScript?</p>
+        <label><input type="radio" name="q20" value="a"> console.print()</label><br>
+        <label><input type="radio" name="q20" value="b"> console.log()</label><br>
+        <label><input type="radio" name="q20" value="c"> print()</label>
+    </div>
+  <button type="submit">Submit Test</button>
+</form>
+
+<script>
+let timer;
+let timeLeft = 1200; // 20 minutes
+const startBtn = document.getElementById("startBtn");
+const quizForm = document.getElementById("quizForm");
+const timerDisplay = document.getElementById("timer");
+
+// Correct answers
+const answers = {
+  q1: "b", q2: "c", q3: "a", q4: "c", q5: "b",
+  q6: "a", q7: "a", q8: "a", q9: "c", q10: "a",
+  q11: "b", q12: "a", q13: "b", q14: "a", q15: "b",
+  q16: "b", q17: "b", q18: "c", q19: "b", q20: "b"
+};
+
+// Start Test
+startBtn.addEventListener("click", () => {
+  startBtn.classList.add("hidden");
+  quizForm.classList.remove("hidden");
+  startTimer();
+});
+
+// Timer
+function startTimer() {
+  timer = setInterval(() => {
+    let minutes = Math.floor(timeLeft / 60);
+    let seconds = timeLeft % 60;
+    timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      submitTest();
+    }
+    timeLeft--;
+  }, 1000);
+}
+
+// Submit Test
+quizForm.addEventListener("submit", function(event) {
+  event.preventDefault();
+  submitTest();
+});
+
+function submitTest() {
+  clearInterval(timer);
+  quizForm.classList.add("hidden");
+  
+  let score = 0;
+  let total = Object.keys(answers).length;
+  
+  for (let key in answers) {
+    let selected = document.querySelector(`input[name="${key}"]:checked`);
+    if (selected && selected.value === answers[key]) score++;
+  }
+  
+  let percentage = ((score / total) * 100).toFixed(2);
+
+  // Save results
+  localStorage.setItem("score", score);
+  localStorage.setItem("total", total);
+  localStorage.setItem("percentage", percentage);
+
+  // Go to congratulations page
+  window.location.href = "congrats.html";
+}
+</script>
+<a href="mocktest.html">
+    <div class="card">⬅ Back to Home</div>
+  </a>
+</body>
+</html>

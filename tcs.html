@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TCS — History & Interview Questions</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0b5ed7;
+      --muted:#556;
+    }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--muted);
+      line-height:1.5;
+      padding:24px;
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:8px;
+      background:linear-gradient(135deg,#083b8a,#0b7be6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 4px 12px rgba(12,40,80,0.12);
+    }
+    h1{ margin:0; font-size:18px; color:#07214d; }
+    .controls{ display:flex; gap:8px; }
+    button.cta{
+      background:var(--accent);
+      border:none;
+      color:white;
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(11,94,214,0.14);
+    }
+    button.ghost{
+      background:transparent;
+      border:1px solid #dce7ff;
+      color:var(--accent);
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    main{
+      display:grid;
+      gap:18px;
+      grid-template-columns: 1fr;
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(20,40,80,0.06);
+    }
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .subtitle{ color:#31527a; font-weight:600; }
+
+    .company-history p{ margin:8px 0; color:#22344a; }
+
+    .requirements ul{ margin:8px 0 0 18px; color:#22344a; }
+
+    .qa-list{ display:flex; flex-direction:column; gap:10px; }
+    .qa{
+      border:1px solid #eef4ff;
+      padding:12px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    .qa .q{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      color:#0b4da1;
+    }
+    .qa .a{
+      margin-top:8px;
+      display:none;
+      color:#16324a;
+    }
+    .qa.open .a{ display:block; }
+    .tag{ font-size:12px; padding:4px 8px; border-radius:999px; background:#eef6ff; color:#0b5ed7; }
+
+    footer{
+      text-align:center;
+      margin-top:18px;
+      color:#6b7c92;
+      font-size:13px;
+    }
+
+    /* responsive */
+    @media (max-width:640px){
+      header{ flex-direction:column; align-items:flex-start; gap:12px; }
+      .controls{ width:100%; justify-content:space-between; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">TCS</div>
+      <div>
+        <h1>Tata Consultancy Services — Company Info & Interview Prep</h1>
+        <div style="font-size:13px;color:#6b7c92">HTML • CSS • JavaScript • HR Round</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <!-- these open anchors in a new tab -->
+      <button class="cta" onclick="openSectionInNewTab('history')">Open History (new tab)</button>
+      <button class="ghost" onclick="openSectionInNewTab('interview')">Open Interview Questions (new tab)</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HISTORY -->
+    <section id="history" class="card company-history">
+      <div class="section-title">
+        <div>
+          <div class="subtitle">Company History</div>
+          <div style="font-size:13px;color:#6b7c92">Short overview & hiring expectations</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:#94a8c6">Founded: 1968 • Headquarters: Mumbai, India</div>
+        </div>
+      </div>
+
+      <p><strong>Tata Consultancy Services (TCS)</strong> is an Indian multinational information technology services and consulting company and part of the Tata group. Founded in 1968, TCS provides IT services, consulting, and business solutions to clients worldwide. Over decades it has grown into one of the world's largest IT employers and service providers.</p>
+
+      <p><strong>What TCS typically looks for in campus / entry hires:</strong></p>
+      <div class="requirements">
+        <ul>
+          <li>Strong fundamentals in programming (data structures, basics of algorithms).</li>
+          <li>Good understanding of web basics if applying for front-end or full-stack roles (HTML/CSS/JS).</li>
+          <li>Ability to solve logic/problem-solving questions, clear communication, and teamwork.</li>
+          <li>Professionalism: punctuality, willingness to learn, and adaptability to different projects.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INTERVIEW -->
+    <section id="interview" class="card">
+      <div class="section-title">
+        <div>
+          <div class="subtitle">Interview Questions (HTML / CSS / JavaScript / HR)</div>
+          <div style="font-size:13px;color:#6b7c92">Tap a question to reveal a sample answer</div>
+        </div>
+        <div>
+          <span class="tag">Practice Mode</span>
+        </div>
+      </div>
+
+      <div class="qa-list">
+
+        <!-- HTML -->
+        <div style="margin-bottom:6px; font-weight:700; color:#12385f">HTML — Common questions</div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">1. What is the difference between &lt;div&gt; and &lt;section&gt; ? <span style="font-size:12px;color:#8aa7d8">HTML</span></div>
+          <div class="a">
+            <strong>Answer:</strong> &lt;div&gt; is a generic container with no semantic meaning. &lt;section&gt; is semantic and represents a standalone section of content, often with a heading. Use semantic tags for accessibility and SEO.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">2. What is the use of the alt attribute on &lt;img&gt;? <span class="tag">Accessibility</span></div>
+          <div class="a">
+            <strong>Answer:</strong> The alt attribute provides alternative text for images for screen readers and when images fail to load. It improves accessibility and SEO.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">3. How do you create a link that opens in a new tab? <span style="font-size:12px">HTML</span></div>
+          <div class="a">
+            <strong>Answer:</strong> Use &lt;a href="URL" target="_blank" rel="noopener noreferrer"&gt;Link&lt;/a&gt;. `rel="noopener noreferrer"` improves security and performance.
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">CSS — Common questions</div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">4. Difference between class and id selectors? <span class="tag">CSS</span></div>
+          <div class="a">
+            <strong>Answer:</strong> `.` selects classes and can be reused multiple times. `#` selects an id which should be unique on a page. ID has higher specificity than class.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">5. How does the CSS box model work? <span style="font-size:12px">Layout</span></div>
+          <div class="a">
+            <strong>Answer:</strong> Box model contains content, padding, border, and margin. Width/height apply to content box by default. `box-sizing: border-box` includes padding and border within width/height.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">6. What is Flexbox and when to use it?</div>
+          <div class="a">
+            <strong>Answer:</strong> Flexbox is a layout mode for distributing space along one axis (row/column). Use it for horizontal/vertical alignment, dynamic resizing, and simple responsive layouts.
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">JavaScript — Common questions</div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">7. Difference between var, let and const? <span class="tag">JS</span></div>
+          <div class="a">
+            <strong>Answer:</strong> `var` is function-scoped and hoisted; `let` and `const` are block-scoped. `const` cannot be reassigned (but objects can be mutated).
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">8. What is event delegation?</div>
+          <div class="a">
+            <strong>Answer:</strong> Event delegation uses a single event listener on a parent element to handle events from child elements (using event bubbling). It reduces listeners and improves performance.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">9. How do promises work? What is async/await?</div>
+          <div class="a">
+            <strong>Answer:</strong> A Promise represents an async operation that can resolve or reject. `async/await` is syntactic sugar to write promise-based code in a synchronous-looking style: `await` pauses until the promise resolves.
+          </div>
+        </div>
+
+        <!-- HR -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">HR Round — Common questions</div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">10. Tell me about yourself.</div>
+          <div class="a">
+            <strong>Answer (sample):</strong> Give a short elevator pitch: your name, education, key projects/skills relevant to the role, and one strength + how you plan to grow at TCS. Keep it concise (60–90 seconds).
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">11. Why do you want to join TCS?</div>
+          <div class="a">
+            <strong>Answer (tip):</strong> Mention TCS's learning culture, large-scale projects exposure, and long-term career growth. Tie it to your goals and what you can contribute.
+          </div>
+        </div>
+
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">12. What are your strengths and weaknesses?</div>
+          <div class="a">
+            <strong>Answer (tip):</strong> Choose strengths that match the job (teamwork, learning quickly). For weakness, pick a real area you're improving and explain how you're addressing it.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="card">
+      <div style="font-weight:700; color:#12385f; margin-bottom:8px">Quick tips</div>
+      <ul>
+        <li>Practice whiteboard/problem questions for aptitude rounds.</li>
+        <li>Keep projects & resume examples ready; be prepared to discuss them in detail.</li>
+        <li>For coding, focus on clear, readable solutions and communicate your thought process.</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; TCS Interview Prep — sample content for practice. Modify questions & answers as you like.
+  </footer>
+  <a href="interview.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+
+  <script>
+    function toggleQA(el){
+      el.classList.toggle('open');
+    }
+
+    // Open section (by id) in a new tab of the same file.
+    function openSectionInNewTab(id){
+      // If the page file name is unknown, open the same path with hash:
+      // This will open the same URL in a new tab with the desired hash.
+      const base = location.pathname.substring(location.pathname.lastIndexOf('/')+1) || 'tcs.html';
+      const newUrl = base + '#' + encodeURIComponent(id);
+      try {
+        window.open(newUrl, '_blank', 'noopener');
+      } catch(e){
+        // fallback if window.open blocked
+        const w = window.open();
+        if(w){
+          w.location = newUrl;
+        } else {
+          alert('Unable to open new tab (popup blocked). You can right-click the "Open" button and choose "Open link in new tab".');
+        }
+      }
+    }
+
+    // If user loaded page with hash (e.g., tcs.html#interview), scroll to it
+    (function scrollToHash(){
+      if(location.hash){
+        const id = decodeURIComponent(location.hash.slice(1));
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      }
+    })();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Questions</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9f9f9; padding: 20px; }
+    h2 { color: #4CAF50; }
+    .question { background: white; padding: 15px; margin: 15px 0; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    button { margin-top: 10px; padding: 8px 15px; border: none; background: #4CAF50; color: white; border-radius: 5px; cursor: pointer; }
+    button:hover { background: #45a049; }
+  </style>
+</head>
+<body>
+  <header>📘 Advanced HTML & CSS Questions</header>
+      <div class="question"><p><b>Q1:</b> Which HTML5 element is used to draw graphics on a web page?</p>
+        <div class="options">
+          <button onclick="checkAnswer(this,true)">canvas</button>
+          <button onclick="checkAnswer(this,false)">svg</button>
+          <button onclick="checkAnswer(this,false)">graphics</button>
+          <button onclick="checkAnswer(this,false)">draw</button>
+        </div>
+      </div>
+
+    <div class="question"><p><b>Q2:</b> Which HTML5 element is used for embedding audio?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">&lt;audio&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;sound&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;music&gt;</button>
+        <button onclick="checkAnswer(this,false)">&lt;media&gt;</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q3:</b> Which HTML5 attribute is used to store custom data?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">data-*</button>
+        <button onclick="checkAnswer(this,false)">custom</button>
+        <button onclick="checkAnswer(this,false)">store</button>
+        <button onclick="checkAnswer(this,false)">meta</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q4:</b> In CSS, which layout uses flexible boxes?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">flexbox</button>
+        <button onclick="checkAnswer(this,false)">grid</button>
+        <button onclick="checkAnswer(this,false)">inline-block</button>
+        <button onclick="checkAnswer(this,false)">float</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q5:</b> Which CSS layout allows 2D row and column alignment?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">grid</button>
+        <button onclick="checkAnswer(this,false)">flexbox</button>
+        <button onclick="checkAnswer(this,false)">inline</button>
+        <button onclick="checkAnswer(this,false)">table</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q6:</b> Which CSS function is used to apply transformations like rotate or scale?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">transform</button>
+        <button onclick="checkAnswer(this,false)">transition</button>
+        <button onclick="checkAnswer(this,false)">animation</button>
+        <button onclick="checkAnswer(this,false)">translate</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q7:</b> Which CSS property creates animations?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">animation</button>
+        <button onclick="checkAnswer(this,false)">transition</button>
+        <button onclick="checkAnswer(this,false)">motion</button>
+        <button onclick="checkAnswer(this,false)">effect</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q8:</b> Which CSS property is used for smooth changes over time?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">transition</button>
+        <button onclick="checkAnswer(this,false)">transform</button>
+        <button onclick="checkAnswer(this,false)">animation</button>
+        <button onclick="checkAnswer(this,false)">effect</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q9:</b> In JavaScript, which keyword is used to declare a variable that can’t be reassigned?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">const</button>
+        <button onclick="checkAnswer(this,false)">let</button>
+        <button onclick="checkAnswer(this,false)">var</button>
+        <button onclick="checkAnswer(this,false)">final</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q10:</b> Which symbol is used for strict equality in JavaScript?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">===</button>
+        <button onclick="checkAnswer(this,false)">==</button>
+        <button onclick="checkAnswer(this,false)">=</button>
+        <button onclick="checkAnswer(this,false)">!=</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q11:</b> Which JavaScript method is used to select an element by ID?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">document.getElementById()</button>
+        <button onclick="checkAnswer(this,false)">document.query()</button>
+        <button onclick="checkAnswer(this,false)">getID()</button>
+        <button onclick="checkAnswer(this,false)">selectByID()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q12:</b> Which method is used to parse a string to integer in JavaScript?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">parseInt()</button>
+        <button onclick="checkAnswer(this,false)">Number()</button>
+        <button onclick="checkAnswer(this,false)">toInt()</button>
+        <button onclick="checkAnswer(this,false)">int()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q13:</b> Which JavaScript function is used to execute code after a delay?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">setTimeout()</button>
+        <button onclick="checkAnswer(this,false)">setInterval()</button>
+        <button onclick="checkAnswer(this,false)">delay()</button>
+        <button onclick="checkAnswer(this,false)">wait()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q14:</b> Which method repeatedly executes code with a fixed interval?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">setInterval()</button>
+        <button onclick="checkAnswer(this,false)">setTimeout()</button>
+        <button onclick="checkAnswer(this,false)">repeat()</button>
+        <button onclick="checkAnswer(this,false)">timer()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q15:</b> Which JavaScript method converts JSON string into an object?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">JSON.parse()</button>
+        <button onclick="checkAnswer(this,false)">JSON.stringify()</button>
+        <button onclick="checkAnswer(this,false)">toObject()</button>
+        <button onclick="checkAnswer(this,false)">convertJSON()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q16:</b> Which method converts an object into a JSON string?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">JSON.stringify()</button>
+        <button onclick="checkAnswer(this,false)">JSON.parse()</button>
+        <button onclick="checkAnswer(this,false)">toJSON()</button>
+        <button onclick="checkAnswer(this,false)">convertString()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q17:</b> Which JavaScript keyword is used to handle errors?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">try...catch</button>
+        <button onclick="checkAnswer(this,false)">error</button>
+        <button onclick="checkAnswer(this,false)">throw</button>
+        <button onclick="checkAnswer(this,false)">handle</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q18:</b> Which modern JS feature allows asynchronous code with `await`?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">async/await</button>
+        <button onclick="checkAnswer(this,false)">promises</button>
+        <button onclick="checkAnswer(this,false)">callbacks</button>
+        <button onclick="checkAnswer(this,false)">threads</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q19:</b> Which JavaScript method is used to fetch data from a server?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">fetch()</button>
+        <button onclick="checkAnswer(this,false)">ajax()</button>
+        <button onclick="checkAnswer(this,false)">httpRequest()</button>
+        <button onclick="checkAnswer(this,false)">get()</button>
+      </div>
+    </div>
+
+    <div class="question"><p><b>Q20:</b> Which JavaScript object represents the browser window?</p>
+      <div class="options">
+        <button onclick="checkAnswer(this,true)">window</button>
+        <button onclick="checkAnswer(this,false)">document</button>
+        <button onclick="checkAnswer(this,false)">navigator</button>
+        <button onclick="checkAnswer(this,false)">screen</button>
+      </div>
+    </div>
+    <a href="index.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+    </div>
+    <script>
+    function checkAnswer(button, correct) {
+      if (correct) {
+        button.style.background = "green";
+        button.innerText += " ✅ Correct!";
+      } else {
+        button.style.background = "red";
+        button.innerText += " ❌ Wrong!";
+      }
+      // disable all buttons in the same question
+      let parent = button.parentElement;
+      let buttons = parent.querySelectorAll("button");
+      buttons.forEach(b => b.disabled = true);
+    }
+    </script>
+  </body>
+</html>
+   

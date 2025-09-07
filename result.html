@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quiz Result</title>
+<style>
+  body { font-family: Arial, sans-serif; text-align: center; padding: 40px; background: #fff3e0; }
+  h1 { font-size: 36px; margin-bottom: 20px; }
+  .score-box { display: inline-block; padding: 20px 40px; background: #fff; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); font-size: 18px; }
+  .score-box p { margin: 10px 0; }
+  #resultMessage { font-size: 28px; font-weight: bold; margin-top: 20px; }
+</style>
+</head>
+<body>
+
+<h1>📊 Quiz Result</h1>
+
+<div class="score-box">
+  <p>Total Questions: <span id="total">0</span></p>
+  <p>Correct Answers: <span id="score">0</span></p>
+  <p>Percentage: <span id="percentage">0</span>%</p>
+</div>
+
+<p id="resultMessage"></p>
+
+<script>
+let score = localStorage.getItem("score") || 0;
+let total = localStorage.getItem("total") || 0;
+let percentage = parseFloat(localStorage.getItem("percentage") || 0);
+
+document.getElementById("score").textContent = score;
+document.getElementById("total").textContent = total;
+document.getElementById("percentage").textContent = percentage.toFixed(2);
+
+const resultMsg = document.getElementById("resultMessage");
+if (percentage >= 50) {
+  resultMsg.textContent = "✅ Pass";
+  resultMsg.style.color = "green";
+} else {
+  resultMsg.textContent = "❌ Fail";
+  resultMsg.style.color = "red";
+}
+</script>
+<a href="mocktest.html">
+    <div class="card">⬅ Back to Home</div>
+  </a>
+
+</body>
+</html>
+

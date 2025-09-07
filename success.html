@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background: #f0f8ff;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    h1 {
+      font-size: 36px;
+      color: #28a745;
+      margin-bottom: 20px;
+      animation: pop 0.6s ease-in-out;
+    }
+
+    @keyframes pop {
+      0% { transform: scale(0); }
+      50% { transform: scale(1.2); }
+      100% { transform: scale(1); }
+    }
+
+    .score-box {
+      display: inline-block;
+      background: #fff;
+      padding: 20px 40px;
+      margin-top: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      font-size: 18px;
+    }
+
+    .score-box p {
+      margin: 8px 0;
+    }
+
+    #resultMessage {
+      font-size: 28px;
+      font-weight: bold;
+      margin-top: 25px;
+      transition: all 0.5s ease;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 35px;
+      text-decoration: none;
+      color: #fff;
+      background: #007bff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="congratsMessage">🎉 Congratulations!</h1>
+
+  <div class="score-box">
+    <p>Total Questions: <span id="total">0</span></p>
+    <p>Correct Answers: <span id="score">0</span></p>
+    <p>Marks Gained: <span id="marksGained">0</span></p>
+    <p>Marks Lost: <span id="marksLost">0</span></p>
+    <p>Percentage: <span id="percentage">0</span>%</p>
+  </div>
+
+  <p id="resultMessage"></p>
+
+  <a href="mocktest1.html">⬅ Back to Test</a>
+  <a href="mocktest1.html" class="btn">🔄 Retake Test</a>
+
+
+  <script>
+    // Retrieve values from localStorage
+    const score = localStorage.getItem("score") || 0;
+    const total = localStorage.getItem("total") || 0;
+    const marksGained = localStorage.getItem("marksGained") || 0;
+    const marksLost = localStorage.getItem("marksLost") || 0;
+    const percentage = parseFloat(localStorage.getItem("percentage") || 0);
+
+    document.getElementById("score").textContent = score;
+    document.getElementById("total").textContent = total;
+    document.getElementById("marksGained").textContent = marksGained;
+    document.getElementById("marksLost").textContent = marksLost;
+    document.getElementById("percentage").textContent = percentage.toFixed(2);
+
+    // Pass/Fail message with color and animation
+    const resultMsg = document.getElementById("resultMessage");
+    const congratsMsg = document.getElementById("congratsMessage");
+
+    if(percentage >= 50){
+      resultMsg.textContent = "✅ Pass";
+      resultMsg.style.color = "#28a745";
+      congratsMsg.textContent = "🎉 Well Done!";
+    } else {
+      resultMsg.textContent = "❌ Fail";
+      resultMsg.style.color = "#dc3545";
+      congratsMsg.textContent = "😢 Better Luck Next Time!";
+    }
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wipro — History & Interview Questions</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#0b5ed7;
+      --muted:#556;
+    }
+    body{
+      margin:0;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--muted);
+      line-height:1.5;
+      padding:24px;
+    }
+    header{
+      display:flex;
+      gap:16px;
+      align-items:center;
+      justify-content:space-between;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo{
+      width:56px;
+      height:56px;
+      border-radius:8px;
+      background:linear-gradient(135deg,#5e2ca5,#8b5cf6);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      color:white;
+      font-weight:700;
+      font-size:20px;
+      box-shadow:0 4px 12px rgba(12,40,80,0.12);
+    }
+    h1{ margin:0; font-size:18px; color:#07214d; }
+    .controls{ display:flex; gap:8px; }
+    button.cta{
+      background:var(--accent);
+      border:none;
+      color:white;
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(11,94,214,0.14);
+    }
+    button.ghost{
+      background:transparent;
+      border:1px solid #dce7ff;
+      color:var(--accent);
+      padding:8px 12px;
+      border-radius:8px;
+      cursor:pointer;
+    }
+
+    main{
+      display:grid;
+      gap:18px;
+      grid-template-columns: 1fr;
+      max-width:980px;
+      margin:0 auto;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 6px 18px rgba(20,40,80,0.06);
+    }
+    .section-title{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      margin-bottom:12px;
+    }
+    .subtitle{ color:#31527a; font-weight:600; }
+
+    .company-history p{ margin:8px 0; color:#22344a; }
+
+    .requirements ul{ margin:8px 0 0 18px; color:#22344a; }
+
+    .qa-list{ display:flex; flex-direction:column; gap:10px; }
+    .qa{
+      border:1px solid #eef4ff;
+      padding:12px;
+      border-radius:10px;
+      cursor:pointer;
+    }
+    .qa .q{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      gap:10px;
+      font-weight:600;
+      color:#0b4da1;
+    }
+    .qa .a{
+      margin-top:8px;
+      display:none;
+      color:#16324a;
+    }
+    .qa.open .a{ display:block; }
+    .tag{ font-size:12px; padding:4px 8px; border-radius:999px; background:#eef6ff; color:#0b5ed7; }
+
+    footer{
+      text-align:center;
+      margin-top:18px;
+      color:#6b7c92;
+      font-size:13px;
+    }
+
+    @media (max-width:640px){
+      header{ flex-direction:column; align-items:flex-start; gap:12px; }
+      .controls{ width:100%; justify-content:space-between; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">W</div>
+      <div>
+        <h1>Wipro — Company Info & Interview Prep</h1>
+        <div style="font-size:13px;color:#6b7c92">HTML • CSS • JavaScript • HR Round</div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button class="cta" onclick="openSectionInNewTab('history')">Open History (new tab)</button>
+      <button class="ghost" onclick="openSectionInNewTab('interview')">Open Interview Questions (new tab)</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HISTORY -->
+    <section id="history" class="card company-history">
+      <div class="section-title">
+        <div>
+          <div class="subtitle">Company History</div>
+          <div style="font-size:13px;color:#6b7c92">Short overview & hiring expectations</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:#94a8c6">Founded: 1945 • Headquarters: Bengaluru, India</div>
+        </div>
+      </div>
+
+      <p><strong>Wipro Limited</strong> is a leading Indian multinational corporation founded in 1945. Originally a vegetable oil company, it diversified into IT services in the 1980s and is now among the top global IT consulting and outsourcing companies. Wipro operates in over 60 countries, providing IT, consulting, and business process services.</p>
+
+      <p><strong>What Wipro typically looks for in freshers:</strong></p>
+      <div class="requirements">
+        <ul>
+          <li>Good knowledge of programming concepts and problem-solving skills.</li>
+          <li>Strong fundamentals in computer science (OOPs, DBMS, Networking).</li>
+          <li>Web basics knowledge (HTML, CSS, JavaScript) is a plus.</li>
+          <li>Communication skills, adaptability, and team collaboration.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- INTERVIEW -->
+    <section id="interview" class="card">
+      <div class="section-title">
+        <div>
+          <div class="subtitle">Interview Questions (HTML / CSS / JavaScript / HR)</div>
+          <div style="font-size:13px;color:#6b7c92">Tap a question to reveal a sample answer</div>
+        </div>
+        <div><span class="tag">Practice Mode</span></div>
+      </div>
+
+      <div class="qa-list">
+        <!-- HTML -->
+        <div style="margin-bottom:6px; font-weight:700; color:#12385f">HTML — Common questions</div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">1. What is semantic HTML? <span style="font-size:12px;color:#8aa7d8">HTML</span></div>
+          <div class="a">
+            <strong>Answer:</strong> Semantic HTML uses meaningful tags like &lt;header&gt;, &lt;article&gt;, &lt;footer&gt; that describe content clearly for both browsers and developers.
+          </div>
+        </div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">2. Difference between inline, block, and inline-block elements?</div>
+          <div class="a">
+            <strong>Answer:</strong> Inline does not start on a new line (span), block takes full width (div), inline-block allows block features but stays inline.
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">CSS — Common questions</div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">3. Difference between relative, absolute, fixed positioning? <span class="tag">CSS</span></div>
+          <div class="a">
+            <strong>Answer:</strong> Relative is offset from normal position, absolute is positioned relative to nearest positioned ancestor, fixed is positioned relative to viewport.
+          </div>
+        </div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">4. What are media queries in CSS?</div>
+          <div class="a">
+            <strong>Answer:</strong> Media queries allow responsive design by applying styles based on device width/height or other conditions.
+          </div>
+        </div>
+
+        <!-- JavaScript -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">JavaScript — Common questions</div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">5. Explain hoisting in JavaScript. <span class="tag">JS</span></div>
+          <div class="a">
+            <strong>Answer:</strong> Hoisting means variable and function declarations are moved to the top of their scope before execution. But let/const are hoisted in the “temporal dead zone.”
+          </div>
+        </div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">6. What is the difference between == and === ?</div>
+          <div class="a">
+            <strong>Answer:</strong> `==` checks equality after type coercion, while `===` checks both value and type.
+          </div>
+        </div>
+
+        <!-- HR -->
+        <div style="margin-top:12px; margin-bottom:6px; font-weight:700; color:#12385f">HR Round — Common questions</div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">7. Tell me about yourself.</div>
+          <div class="a"><strong>Answer:</strong> Introduce education, projects, technical skills, and how they align with Wipro’s values and global projects.</div>
+        </div>
+        <div class="qa" onclick="toggleQA(this)">
+          <div class="q">8. Why do you want to join Wipro?</div>
+          <div class="a"><strong>Answer:</strong> Mention Wipro’s global exposure, innovation culture, and opportunities to work on cutting-edge projects.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div style="font-weight:700; color:#12385f; margin-bottom:8px">Quick tips</div>
+      <ul>
+        <li>Prepare for aptitude + logical reasoning (Wipro often tests this).</li>
+        <li>Revise DBMS, OOPs, and basics of OS before technical interview.</li>
+        <li>Show eagerness to learn and adapt in HR round.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    &copy; Wipro Interview Prep — sample content for practice. Modify questions & answers as you like.
+  </footer>
+  <a href="interview.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+
+
+  <script>
+    function toggleQA(el){ el.classList.toggle('open'); }
+    function openSectionInNewTab(id){
+      const base = location.pathname.substring(location.pathname.lastIndexOf('/')+1) || 'wipro.html';
+      const newUrl = base + '#' + encodeURIComponent(id);
+      try { window.open(newUrl, '_blank', 'noopener'); }
+      catch(e){ 
+        const w = window.open(); 
+        if(w){ w.location = newUrl; } 
+        else { alert('Popup blocked. Right-click and open in new tab.'); } 
+      }
+    }
+    (function scrollToHash(){
+      if(location.hash){
+        const id = decodeURIComponent(location.hash.slice(1));
+        const el = document.getElementById(id);
+        if(el) el.scrollIntoView({behavior:'smooth'});
+      }
+    })();
+  </script>
+</body>
+</html>

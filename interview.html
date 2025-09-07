@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview Questions - WebQuizzer</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f9;
+      text-align: center;
+    }
+    header {
+      background: #4CAF50;
+      color: white;
+      padding: 15px;
+      font-size: 24px;
+    }
+    .container {
+      margin: 20px auto;
+      width: 90%;
+      max-width: 800px;
+    }
+    .company-list {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #1e293b;
+      padding: 15px;
+      border-radius: 10px;
+      width: 200px;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card:hover {
+      background: #0ad71b;
+      transform: scale(1.05);
+    }
+    .details {
+      display: none;
+      background: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: left;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    .details h2 {
+      margin-top: 0;
+      color: #4CAF50;
+    }
+    .back-btn {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .back-btn:hover {
+      background: #388e3c;
+    }
+  </style>
+</head>
+<body>
+  <header>💼 Interview Preparation</header>
+  
+
+  <div class="container">
+    <!-- Company Selection -->
+    <div class="company-list">
+      <a href="tcs.html">
+        <div class="card" onclick="showDetails('tcs')">TCS</div>
+      </a>
+      <a href="wipro.html">
+        <div class="card" onclick="showDetails('wipro')">Wipro</div>
+      </a>
+      <a href="cognizant.html">
+        <div class="card" onclick="showDetails('cognizant')">Cognizant</div>
+      </a>
+      <div class="container">
+        <a href="index.html">
+      <div class="card">⬅ Back to Home</div>
+    </a>
+      </div>
+      
+    </div>
+  </body>
+</html>

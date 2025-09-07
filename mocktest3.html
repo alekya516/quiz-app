@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mock Test 3</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .hidden { display: none; }
+    #timer { font-weight: bold; color: red; }
+    .question { margin-bottom: 15px; }
+    button { margin-top: 10px; padding: 10px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <h1>📑 Mock Test 3</h1>
+  <p>Duration: <span id="timer">15:00</span></p>
+
+  <button id="startBtn">Start Test</button>
+
+  <form id="quizForm" class="hidden">
+    <div class="question">
+      <p>1. If 7 workers can complete a task in 12 days, how long will 4 workers take?</p>
+      <label><input type="radio" name="q1" value="a"> 18 days</label><br>
+      <label><input type="radio" name="q1" value="b"> 21 days</label><br>
+      <label><input type="radio" name="q1" value="c"> 24 days</label>
+    </div>
+    <div class="question">
+      <p>2. A sum of ₹10,000 is borrowed at 6% simple interest per annum. Interest for 5 years?</p>
+      <label><input type="radio" name="q2" value="a"> ₹3,000</label><br>
+      <label><input type="radio" name="q2" value="b"> ₹3,500</label><br>
+      <label><input type="radio" name="q2" value="c"> ₹4,000</label>
+    </div>
+    <div class="question">
+      <p>3. Find the next number: 2, 6, 12, 20, ?</p>
+      <label><input type="radio" name="q3" value="a"> 28</label><br>
+      <label><input type="radio" name="q3" value="b"> 30</label><br>
+      <label><input type="radio" name="q3" value="c"> 32</label>
+    </div>
+    <div class="question">
+      <p>4. A bag contains 4 red, 5 blue, and 6 black balls. Probability of picking a black ball?</p>
+      <label><input type="radio" name="q4" value="a"> 1/3</label><br>
+      <label><input type="radio" name="q4" value="b"> 5/7</label><br>
+      <label><input type="radio" name="q4" value="c"> 6/15</label>
+    </div>
+    <div class="question">
+      <p>5. A shopkeeper buys an article for ₹400 and sells it for ₹500. Profit percentage?</p>
+      <label><input type="radio" name="q5" value="a"> 20%</label><br>
+      <label><input type="radio" name="q5" value="b"> 25%</label><br>
+      <label><input type="radio" name="q5" value="c"> 30%</label>
+    </div>
+    <div class="question">
+      <p>6. The cost price of 15 articles is equal to the selling price of 12 articles. Profit percentage?</p>
+      <label><input type="radio" name="q6" value="a"> 20%</label><br>
+      <label><input type="radio" name="q6" value="b"> 25%</label><br>
+      <label><input type="radio" name="q6" value="c"> 15%</label>
+    </div>
+    <div class="question">
+      <p>7. Antonym of "Polite"?</p>
+      <label><input type="radio" name="q7" value="a"> Rude</label><br>
+      <label><input type="radio" name="q7" value="b"> Kind</label><br>
+      <label><input type="radio" name="q7" value="c"> Respectful</label>
+    </div>
+    <div class="question">
+      <p>8. Antonym of "Scarce"?</p>
+      <label><input type="radio" name="q8" value="a"> Rare</label><br>
+      <label><input type="radio" name="q8" value="b"> Abundant</label><br>
+      <label><input type="radio" name="q8" value="c"> Sparse</label>
+    </div>
+    <div class="question">
+      <p>9. Synonym of "Quick"?</p>
+      <label><input type="radio" name="q9" value="a"> Fast</label><br>
+      <label><input type="radio" name="q9" value="b"> Slow</label><br>
+      <label><input type="radio" name="q9" value="c"> Late</label>
+    </div>
+    <div class="question">
+      <p>10. Fill in the blank: He apologized ___ being late.</p>
+      <label><input type="radio" name="q10" value="a"> for</label><br>
+      <label><input type="radio" name="q10" value="b"> of</label><br>
+      <label><input type="radio" name="q10" value="c"> at</label>
+    </div>
+    <div class="question">
+      <p>11. Choose the correct tense: She ___ a book yesterday.</p>
+      <label><input type="radio" name="q11" value="a"> reads</label><br>
+      <label><input type="radio" name="q11" value="b"> read</label><br>
+      <label><input type="radio" name="q11" value="c"> will read</label>
+    </div>
+    <div class="question">
+      <p>12. Which tag is used to define a paragraph?</p>
+      <label><input type="radio" name="q12" value="a"> &lt;p&gt;</label><br>
+      <label><input type="radio" name="q12" value="b"> &lt;para&gt;</label><br>
+      <label><input type="radio" name="q12" value="c"> &lt;text&gt;</label>
+    </div>
+    <div class="question">
+      <p>13. Which tag is used to create an unordered list?</p>
+      <label><input type="radio" name="q13" value="a"> &lt;ul&gt;</label><br>
+      <label><input type="radio" name="q13" value="b"> &lt;ol&gt;</label><br>
+      <label><input type="radio" name="q13" value="c"> &lt;li&gt;</label>
+    </div>
+    <div class="question">
+      <p>14. Which attribute specifies the URL of a link?</p>
+      <label><input type="radio" name="q14" value="a"> href</label><br>
+      <label><input type="radio" name="q14" value="b"> src</label><br>
+      <label><input type="radio" name="q14" value="c"> link</label>
+    </div>
+    <div class="question">
+      <p>15. CSS property to make text italic?</p>
+      <label><input type="radio" name="q15" value="a"> font-weight</label><br>
+      <label><input type="radio" name="q15" value="b"> font-style</label><br>
+      <label><input type="radio" name="q15" value="c"> text-decoration</label>
+    </div>
+    <div class="question">
+      <p>16. CSS property to add space inside an element?</p>
+      <label><input type="radio" name="q16" value="a"> margin</label><br>
+      <label><input type="radio" name="q16" value="b"> padding</label><br>
+      <label><input type="radio" name="q16" value="c"> border</label>
+    </div>
+    <div class="question">
+      <p>17. CSS property to remove bullet points from a list?</p>
+      <label><input type="radio" name="q17" value="a"> list-style-type: none;</label><br>
+      <label><input type="radio" name="q17" value="b"> text-decoration: none;</label><br>
+      <label><input type="radio" name="q17" value="c"> display: none;</label>
+    </div>
+    <div class="question">
+      <p>18. JavaScript keyword to declare a variable that can change?</p>
+      <label><input type="radio" name="q18" value="a"> const</label><br>
+      <label><input type="radio" name="q18" value="b"> let</label><br>
+      <label><input type="radio" name="q18" value="c"> static</label>
+    </div>
+    <div class="question">
+      <p>19. JavaScript operator for strict equality?</p>
+      <label><input type="radio" name="q19" value="a"> ==</label><br>
+      <label><input type="radio" name="q19" value="b"> ===</label><br>
+      <label><input type="radio" name="q19" value="c"> !=</label>
+    </div>
+    <div class="question">
+      <p>20. Method to add an element at the end of an array in JavaScript?</p>
+      <label><input type="radio" name="q20" value="a"> push()</label><br>
+      <label><input type="radio" name="q20" value="b"> pop()</label><br>
+      <label><input type="radio" name="q20" value="c"> shift()</label>
+    </div>
+
+    <button type="submit">Submit Test</button>
+  </form>
+
+  <div id="result" class="hidden"></div>
+
+  <script>
+    let timer;
+    let timeLeft = 900; // 15 minutes
+
+    const startBtn = document.getElementById("startBtn");
+    const quizForm = document.getElementById("quizForm");
+    const resultDiv = document.getElementById("result");
+    const timerDisplay = document.getElementById("timer");
+
+    const answers = {
+      q1: "b", // 21 days
+      q2: "a", // ₹3,000
+      q3: "b", // 30 (next number in series 2, 6, 12, 20…)
+      q4: "c", // 6/15
+      q5: "b", // 25%
+      q6: "a", // 20%
+      q7: "a", // Rude
+      q8: "b", // Abundant
+      q9: "a", // Fast
+      q10: "a", // for
+      q11: "b", // read
+      q12: "a", // <p>
+      q13: "a", // <ul>
+      q14: "a", // href
+      q15: "b", // font-style
+      q16: "b", // padding
+      q17: "a", // list-style-type: none;
+      q18: "b", // let
+      q19: "b", // ===
+      q20: "a" // push()
+    };
+
+    startBtn.addEventListener("click", () => {
+      startBtn.classList.add("hidden");
+      quizForm.classList.remove("hidden");
+      startTimer();
+    });
+
+    function startTimer() {
+      timer = setInterval(() => {
+        let minutes = Math.floor(timeLeft / 60);
+        let seconds = timeLeft % 60;
+        timerDisplay.textContent = `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+        if (timeLeft <= 0) {
+          clearInterval(timer);
+          submitTest();
+        }
+        timeLeft--;
+      }, 1000);
+    }
+
+    quizForm.addEventListener("submit", function(event) {
+      event.preventDefault();
+      submitTest();
+    });
+
+    function submitTest() {
+      clearInterval(timer);
+      quizForm.classList.add("hidden");
+
+      let score = 0;
+      let total = Object.keys(answers).length;
+
+      for (let key in answers) {
+        let selected = document.querySelector(`input[name="${key}"]:checked`);
+        if (selected && selected.value === answers[key]) score++;
+      }
+
+      let percentage = ((score / total) * 100).toFixed(2);
+      localStorage.setItem("score",score);
+      localStorage.setItem("total",total);
+      localStorage.setItem("percentage",percentage);
+      window.location.href = "congrats.html";
+    }
+  </script>
+
+  <a href="mock test.html">
+    <div class="card">⬅ Back to Home</div>
+  </a>
+
+</body>
+</html>
